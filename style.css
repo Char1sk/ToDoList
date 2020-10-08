@@ -29,7 +29,7 @@ p
 {
     position: relative;
     height: 635px;
-    
+    font-size: 40px;
 }
 .body .left
 {
@@ -41,6 +41,37 @@ p
     left: 0;
     width: 300px;
     height: 635px;
+}
+.body .left .buttons
+{
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100px;
+}
+.body .left .buttons .newOne
+{
+    border: outset;
+    border-width: 5px;
+    border-color: rgb(231, 231, 42);
+    position: absolute;
+    background-color: rgb(231, 199, 154);
+    top: 0;
+    left: 0;
+    width: 140px;
+    height: 100px;
+}
+.body .left .buttons .deleteOne
+{
+    border: outset;
+    border-width: 5px;
+    border-color: rgb(202, 50, 50);
+    position: absolute;
+    background-color: rgb(231, 199, 154);
+    top: 0;
+    right: 0;
+    width: 140px;
+    height: 100px;
 }
 .body .center
 {
