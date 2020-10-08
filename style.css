@@ -3,3 +3,57 @@ p
     font-size: 24px;
     font-family: "consolas", "courier new";
 }
+
+.mainWindow
+{
+    border-style: solid solid solid solid;
+    border-color: black;
+    margin: 0;
+    padding: 0;
+    height: 700px;
+    font-family: consolas;
+    background-color: burlywood;
+}
+.mainWindow .title
+{
+    border-width: 5px;
+    border-bottom-style: double;
+    border-color: black;
+    margin: auto;
+    padding: auto;
+    height: 60px;
+    font-size: 48px;
+    text-align: center;
+}
+.mainWindow .classes
+{
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-color: black;
+    background-color: green;
+    /* position: relative; */
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 635px;
+}
+.mainWindow .items
+{
+    background-color: yellow;
+    margin: 0 300px 0 300px;
+    
+    height: 635px;
+    width: 700px;
+}
+.mainWindow .urgents
+{
+    border-left-style: solid;
+    border-bottom-style: solid;
+    border-color: black;
+    background-color: green;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 635px;
+}
