@@ -6,6 +6,11 @@
         <link rel="stylesheet" href="./style.css">
     </head>
     <body>
+        <!-- <div class="outer">
+            <div class="inner">foo</div>
+            <div class="inner">bar</div>
+            <div class="inner">whatever</div>
+        </div> -->
         <div class="mainWindow">
             <div class="title">
                 To Do List
@@ -20,8 +25,11 @@
                             删除<br/>类别
                         </div>
                     </div>
+                    <hr/>
                     <div class="classes">
-                        <!-- 循环输出Classes -->
+                        <div class="singleClass" v-for="cls of classes">
+                            {{ cls.message }}
+                        </div>
                     </div>
                 </div>
                 <div class="center">
@@ -37,5 +45,7 @@
                 </div>
             </div>
         </div>
+        <script src="./model.js"></script>
+        <script src="./method.js"></script>
     </body>
 </html>

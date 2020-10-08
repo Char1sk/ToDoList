@@ -1,3 +1,19 @@
+.outer {
+    border: 2px solid red;
+    float:left;
+    top:0;
+    bottom:0;
+    position:absolute;
+}
+/* .classes {
+    max-height:100%;
+    overflow-y:auto;
+    border: 2px solid blue;
+    width:30%;
+    margin-right:2%;
+    float:left;
+} */
+
 p
 {
     font-size: 24px;
@@ -63,7 +79,7 @@ p
 }
 .body .left .buttons .deleteOne
 {
-    border: outset;
+    border-style: outset;
     border-width: 5px;
     border-color: rgb(202, 50, 50);
     position: absolute;
@@ -72,6 +88,22 @@ p
     right: 0;
     width: 140px;
     height: 100px;
+}
+.body .left .classes
+{
+    background-color: rgb(240, 206, 161);
+    height: 480px;
+    overflow-y: scroll;
+}
+.body .left .classes .singleClass
+{
+    margin: 5px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    background-color:rgb(235, 197, 144);
+    /* rgb(235, 197, 144) Up   */
+    /* rgb(223, 191, 147) Down */
 }
 .body .center
 {
