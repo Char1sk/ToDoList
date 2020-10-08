@@ -14,43 +14,45 @@ p
     font-family: consolas;
     background-color: burlywood;
 }
-.mainWindow .title
+.title
 {
     border-width: 5px;
     border-bottom-style: double;
     border-color: black;
-    margin: auto;
-    padding: auto;
+    margin: 0;
+    padding: 0;
     height: 60px;
-    font-size: 48px;
+    font-size: 55px;
     text-align: center;
 }
-.mainWindow .classes
+.body
+{
+    position: relative;
+    height: 635px;
+    
+}
+.body .left
 {
     border-right-style: solid;
     border-bottom-style: solid;
     border-color: black;
-    background-color: green;
-    /* position: relative; */
+    position: absolute;
     top: 0;
     left: 0;
     width: 300px;
     height: 635px;
 }
-.mainWindow .items
+.body .center
 {
-    background-color: yellow;
     margin: 0 300px 0 300px;
-    
     height: 635px;
-    width: 700px;
+    width: 915px;
 }
-.mainWindow .urgents
+.body .right
 {
     border-left-style: solid;
     border-bottom-style: solid;
     border-color: black;
-    background-color: green;
     position: absolute;
     top: 0;
     right: 0;
