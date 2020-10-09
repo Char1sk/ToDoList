@@ -6,11 +6,6 @@
         <link rel="stylesheet" href="./style.css">
     </head>
     <body>
-        <!-- <div class="outer">
-            <div class="inner">foo</div>
-            <div class="inner">bar</div>
-            <div class="inner">whatever</div>
-        </div> -->
         <div class="mainWindow">
             <div class="titles">
                 <span class="subTitle">当前类别:{{ activeClass }} </span>
@@ -37,17 +32,28 @@
                     </div>
                 </div>
                 <div class="center">
-                    <div class="thing" v-for="thing of things[activeClass]">
-                        <span class="subtitle">
-                            <b>{{ thing.subtitle }}</b>
-                        </span>
-                        <span class="content">
-                            {{ thing.content }}
-                        </span>
-                        <span class="ddl">
-                            {{ thing.deadline }}
-                        </span>
-                        <br/>
+                    <div class="item" v-for="(thing, index) of things[activeClass]">
+                        <div class="deli" v-on:click="deli(index)">
+                            X
+                        </div>
+                        <div class="undo" v-on:click="undo(index)">
+                            待做
+                        </div>
+                        <div class="done" v-on:click="done(index)">
+                            已做
+                        </div>
+                        <div class="thing" >
+                            <span class="subtitle">
+                                <b>{{ thing.subtitle }}</b>
+                            </span>
+                            <span class="content">
+                                {{ thing.content }}
+                            </span>
+                            <span class="ddl">
+                                {{ thing.deadline }}
+                            </span>
+                            <br/>
+                        </div>
                     </div>
                 </div>
                 <div class="newItemButton" v-if="newItemOn" v-on:click="newItem">
@@ -59,11 +65,12 @@
                     </div>
                     <div class="urgentItems">
                         <!-- 循环输出紧急事件 -->
+                        <!-- To Be Continued -->
                     </div>
                 </div>
             </div>
         </div>
         <script src="./model.js"></script>
-        <!-- <script src="./method.js"></script> -->
+        <!-- 为什么放在最后才不报错？放前面就有错 -->
     </body>
 </html>
