@@ -12,39 +12,46 @@
             <div class="inner">whatever</div>
         </div> -->
         <div class="mainWindow">
-            <div class="title">
-                To Do List
-            <div>
+            <div class="titles">
+                <span class="subTitle">当前类别:{{ activeClass }} </span>
+                <span class="title">To Do List</span>
+            </div>
             <div class="body">
                 <div class="left">
                     <div class="buttons">
-                        <div class="newOne">
+                        <div class="newOne" v-on:click="newOneClass">
                             新建<br/>类别
                         </div>
-                        <div class="deleteOne">
+                        <div class="deleteOne" v-on:click="deleteButtonOn">
                             删除<br/>类别
                         </div>
                     </div>
                     <hr/>
                     <div class="classes">
-                        <div class="singleClass" v-for="cls of classes">
+                        <div class="singleClass" v-for="(cls of classes" v-on:click="chooseClass(cls.name)">
                             {{ cls.name }}
+                            <span class="deleteButton" v-if="deleteOn" v-on:click.stop="deleteClass(cls.name)">
+                                删除
+                            </span>
                         </div>
                     </div>
                 </div>
                 <div class="center">
-                    <div class="thing" v-for="thing of things['AAA']">
+                    <div class="thing" v-for="thing of things[activeClass]">
                         <span class="subtitle">
-                            {{ thing.subtitle }}
+                            <b>{{ thing.subtitle }}</b>
                         </span>
                         <span class="content">
                             {{ thing.content }}
                         </span>
                         <span class="ddl">
-                            {{ thing.ddl }}
+                            {{ thing.deadline }}
                         </span>
                         <br/>
                     </div>
+                </div>
+                <div class="newItemButton" v-if="newItemOn" v-on:click="newItem">
+                    新 建 事 件
                 </div>
                 <div class="right">
                     <div class="urgentTitle">

@@ -1,19 +1,3 @@
-.outer {
-    border: 2px solid red;
-    float:left;
-    top:0;
-    bottom:0;
-    position:absolute;
-}
-/* .classes {
-    max-height:100%;
-    overflow-y:auto;
-    border: 2px solid blue;
-    width:30%;
-    margin-right:2%;
-    float:left;
-} */
-
 p
 {
     font-size: 24px;
@@ -22,7 +6,7 @@ p
 
 .mainWindow
 {
-    border-style: solid solid solid solid;
+    border-style: solid;
     border-color: black;
     margin: 0;
     padding: 0;
@@ -30,15 +14,30 @@ p
     font-family: consolas;
     background-color: burlywood;
 }
-.title
+.titles
 {
     border-width: 5px;
     border-bottom-style: double;
     border-color: black;
-    margin: 0;
-    padding: 0;
     height: 60px;
     font-size: 55px;
+    text-align: center;
+}
+.titles .subTitle
+{
+    border-right: dashed;
+    border-width: 1px;
+    border-color: black;
+    float: left;
+    height: 60px;
+    width: 300px;
+    overflow-x: auto;
+    font-size: 30px;
+    text-align: left;
+    white-space: nowrap;
+}
+.titles .title
+{
     text-align: center;
 }
 .body
@@ -46,6 +45,7 @@ p
     position: relative;
     height: 635px;
     font-size: 38px;
+    text-align: center;
 }
 .body .left
 {
@@ -98,19 +98,36 @@ p
 .body .left .classes .singleClass
 {
     margin: 5px;
+    width: 286px;
     border-style: solid;
     border-width: 2px;
     border-color: black;
     background-color:rgb(235, 197, 144);
+    text-align: left;
     overflow-x: auto;
     /* rgb(235, 197, 144) Up   */
     /* rgb(223, 191, 147) Down */
 }
+.body .left .classes .singleClass .deleteButton
+{
+    float: right;
+    font-size:17px;
+    padding: 5px;
+    right: 0;
+    border-left-style: dashed;
+    border-width: 2px;
+    border-color: black;
+    writing-mode: vertical-lr;
+    background-color:red;
+}
 .body .center
 {
     margin: 0 300px 0 300px;
-    height: 635px;
-    width: 915px;
+    border-bottom-style: dashed;
+    border-width: 2px;
+    border-color: black;
+    height: 570px;
+    width: 895px;
     background-color: rgb(228,196,155);
     overflow-y: auto;
 }
@@ -120,12 +137,48 @@ p
     border-style: ridge;
     border-width: 5px;
     border-color: rgb(209,156,87);
-    height: 45px;
-    width: 875px;
+    height: 62px;
+    width: 850px;
     background-color: rgb(164,231,168);
     /* rgb(222,141,135) Undone */
     /* rgb(164,231,168) Done   */
     overflow-x: auto;
+}
+.body .newItemButton
+{
+    margin: 5px 10px 20px 310px;
+    border-style: ridge;
+    border-width: 5px;
+    border-color: rgb(209,156,87);
+    height: 40px;
+    width: 850px;
+    font-size: 30px;
+    background-color: yellow;
+}
+.body .center .thing .subtitle
+{
+    float: left;
+    width: 200px;
+    overflow-x: auto;
+}
+.body .center .thing .content
+{
+    float: left;
+    border-left-style: dashed;
+    border-width: 2px;
+    border-color: black;
+    padding-left: 10px;
+    height: 62px;
+    text-align: left;
+}
+.body .center .thing .ddl
+{
+    float: right;
+    border-left-style: dashed;
+    border-width: 2px;
+    border-color: black;
+    width: 250px;
+    height: 62px;
 }
 .body .right
 {
