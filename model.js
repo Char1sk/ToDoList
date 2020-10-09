@@ -8,11 +8,20 @@ var example1 = new Vue({
             { name: 'DDD' },
             { name: 'EEE' }
         ],
-        things: [
-            {subtitle: 'aaa', content: 'Aaaaaa', ddl: '2020'},
-            {subtitle: 'aaa', content: 'Aaaaaa', ddl: '2020'},
-            {subtitle: 'aaa', content: 'Aaaaaa', ddl: '2020'},
-            {subtitle: 'aaa', content: 'Aaaaaa', ddl: '2020'}
-        ]
+        things: {
+            AAA: [
+                {subtitle: 'aaa', content: 'Aaaaaa', ddl: '2020'},
+                {subtitle: 'aaa', content: 'Aaaaaa', ddl: '2020'},
+                {subtitle: 'aaa', content: 'Aaaaaa', ddl: '2020'},
+                {subtitle: 'aaa', content: 'Aaaaaa', ddl: '2020'},
+                {subtitle: 'aaa', content: 'Aaaaaa', ddl: '2020'}
+            ],
+            BBB: [
+                {subtitle: 'bbb', content: 'Aaaaaa', ddl: '2020'},
+                {subtitle: 'aaa', content: 'Aaaaaa', ddl: '2020'},
+                {subtitle: 'aaa', content: 'Aaaaaa', ddl: '2020'},
+                {subtitle: 'aaa', content: 'Aaaaaa', ddl: '2020'}
+            ]
+        }
     }
 })
