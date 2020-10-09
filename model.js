@@ -1,19 +1,18 @@
 var example1 = new Vue({
-    el: '.classes',
+    el: '.body',
     data: {
-      classes: [
-        { message: 'Foo' },
-        { message: 'Foo' },
-        { message: 'Foo' },
-        { message: 'Foo' },
-        { message: 'Foo' },
-        { message: 'Foo' },
-        { message: 'Foo' },
-        { message: 'Foo' },
-        { message: 'Foo' },
-        { message: 'Foo' },
-        { message: 'Foo' },
-        { message: 'Bar' }
-      ]
+        classes: [
+            { name: 'AAA' },
+            { name: 'BBB' },
+            { name: 'CCC' },
+            { name: 'DDD' },
+            { name: 'EEE' }
+        ],
+        things: [
+            {subtitle: 'aaa', content: 'Aaaaaa', ddl: '2020'},
+            {subtitle: 'aaa', content: 'Aaaaaa', ddl: '2020'},
+            {subtitle: 'aaa', content: 'Aaaaaa', ddl: '2020'},
+            {subtitle: 'aaa', content: 'Aaaaaa', ddl: '2020'}
+        ]
     }
 })

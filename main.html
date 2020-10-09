@@ -28,12 +28,23 @@
                     <hr/>
                     <div class="classes">
                         <div class="singleClass" v-for="cls of classes">
-                            {{ cls.message }}
+                            {{ cls.name }}
                         </div>
                     </div>
                 </div>
                 <div class="center">
-                    <!-- 循环输出items -->
+                    <div class="thing" v-for="thing of things">
+                        <span class="subtitle">
+                            {{ thing.subtitle }}
+                        </span>
+                        <span class="content">
+                            {{ thing.content }}
+                        </span>
+                        <span class="ddl">
+                            {{ thing.ddl }}
+                        </span>
+                        <br/>
+                    </div>
                 </div>
                 <div class="right">
                     <div class="urgentTitle">
@@ -46,6 +57,6 @@
             </div>
         </div>
         <script src="./model.js"></script>
-        <script src="./method.js"></script>
+        <!-- <script src="./method.js"></script> -->
     </body>
 </html>
